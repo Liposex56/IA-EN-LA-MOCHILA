@@ -315,6 +315,8 @@
       line-height: 1.6;
     }
 
+
+
     /* ==================== CONTENIDO EDUCATIVO ==================== */
     .content-container {
       max-width: 1200px;
@@ -871,9 +873,250 @@
         font-size: 48px;
       }
     }
+    /* ==================== NOTEBOOKLM ESPECÍFICO ==================== */
+.info-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+  transition: all 0.3s;
+}
+
+.info-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-3px);
+}
+
+.info-card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.info-card-icon {
+  font-size: 40px;
+  flex-shrink: 0;
+}
+
+.info-card-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #fbbf24;
+}
+
+.info-card-content {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #e0e7ff;
+}
+
+.steps-container {
+  display: grid;
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.step-item {
+  background: rgba(251, 191, 36, 0.1);
+  border-left: 4px solid #fbbf24;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  gap: 15px;
+  align-items: start;
+}
+
+.step-number {
+  background: #fbbf24;
+  color: #0f172a;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.step-content h4 {
+  color: #fbbf24;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.step-content p {
+  color: #e0e7ff;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 25px 0;
+}
+
+.comparison-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.comparison-card.highlight {
+  border-color: #fbbf24;
+  background: rgba(251, 191, 36, 0.1);
+}
+
+.comparison-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.comparison-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #93c5fd;
+  margin-bottom: 10px;
+}
+
+.comparison-desc {
+  font-size: 14px;
+  color: #bfdbfe;
+  line-height: 1.6;
+}
+
+.video-embed-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 25px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.video-embed-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin: 25px 0;
+}
+
+.gallery-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.gallery-caption {
+  font-size: 14px;
+  color: #bfdbfe;
+  margin-top: 10px;
+}
+
+.pros-cons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 25px 0;
+}
+
+.pros-card, .cons-card {
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.pros-card {
+  background: rgba(34, 197, 94, 0.1);
+  border: 2px solid #22c55e;
+}
+
+.cons-card {
+  background: rgba(239, 68, 68, 0.1);
+  border: 2px solid #ef4444;
+}
+
+.pros-card h3, .cons-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.pros-card h3 {
+  color: #22c55e;
+}
+
+.cons-card h3 {
+  color: #ef4444;
+}
+
+.pros-card ul, .cons-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pros-card li, .cons-card li {
+  padding: 10px 0;
+  padding-left: 30px;
+  position: relative;
+  color: #e0e7ff;
+  line-height: 1.6;
+}
+
+.pros-card li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #22c55e;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.cons-card li::before {
+  content: '⚠';
+  position: absolute;
+  left: 0;
+  color: #ef4444;
+  font-size: 16px;
+}
   </style>
 </head>
 <body>
+
+  
+  
 
   <!-- ==================== VISTA DE INICIO DE SESIÓN ==================== -->
   <div id="loginView" class="view active">
@@ -978,10 +1221,322 @@
           <h3 class="unit-title">Evaluación</h3>
           <p class="unit-description">Pon a prueba tus conocimientos sobre herramientas de IA educativa</p>
         </div>
+
+        <div class="unit-card" data-view="notebooklmView">
+           <div class="unit-icon">📓</div>
+           <h3 class="unit-title">NotebookLM</h3>
+           <p class="unit-description">La Mano Amiga del Profesor para Entender y Sintetizar Contenido Complejo</p>
+        </div>
+          
+          </div>
+        </div>
       </div>
     </main>
   </div>
 
+       <!-- ==================== VISTA: NOTEBOOKLM ==================== -->
+<div id="notebooklmView" class="view">
+  <header class="header">
+    <div class="header-content">
+      <button class="btn-back" data-back="dashboardView">← Volver</button>
+      <button class="btn-logout" id="logoutBtn6">🚪 Salir</button>
+    </div>
+  </header>
+
+  <div class="content-container">
+    <div class="content-section">
+      <h1 class="section-title">📓 NotebookLM: La Mano Amiga del Profesor</h1>
+      
+      <p class="section-text">
+        <strong>NotebookLM</strong> es una herramienta revolucionaria desarrollada por Google Labs que funciona como tu asistente personal de investigación potenciado por IA. A diferencia de otros chatbots que "conocen todo internet", NotebookLM trabaja exclusivamente con <strong>TUS documentos</strong>, garantizando respuestas precisas y verificables.
+      </p>
+
+      <div class="video-embed-container">
+        <iframe src="https://www.youtube.com/embed/MvFXcIIb8EI" allowfullscreen></iframe>
+      </div>
+
+      <h2 class="section-subtitle">🎯 ¿Qué hace NotebookLM especial?</h2>
+
+      <div class="comparison-grid">
+        <div class="comparison-card highlight">
+          <div class="comparison-icon">📚</div>
+          <h3 class="comparison-title">Basado en TUS Fuentes</h3>
+          <p class="comparison-desc">Solo usa los documentos que TÚ subes, evitando información incorrecta o no verificada</p>
+        </div>
+
+        <div class="comparison-card">
+          <div class="comparison-icon">🔍</div>
+          <h3 class="comparison-title">Citas Verificables</h3>
+          <p class="comparison-desc">Cada respuesta incluye referencias exactas a tus documentos originales</p>
+        </div>
+
+        <div class="comparison-card">
+          <div class="comparison-icon">🎙️</div>
+          <h3 class="comparison-title">Genera Podcasts</h3>
+          <p class="comparison-desc">Convierte tus documentos en conversaciones de audio estilo podcast</p>
+        </div>
+
+        <div class="comparison-card">
+          <div class="comparison-icon">📝</div>
+          <h3 class="comparison-title">Múltiples Formatos</h3>
+          <p class="comparison-desc">Crea guías de estudio, FAQs, resúmenes, timelines y más</p>
+        </div>
+      </div>
+
+      <h2 class="section-subtitle">🚀 Casos de Uso para Profesores</h2>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📖</div>
+          <h3 class="feature-title">Preparación de Clases</h3>
+          <p class="feature-description">Sube tu material del curso y pide resúmenes, puntos clave o actividades basadas en él.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">✅</div>
+          <h3 class="feature-title">Generación de Evaluaciones</h3>
+          <p class="feature-description">Crea exámenes, quizzes y preguntas de repaso automáticamente desde tus apuntes.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🎯</div>
+          <h3 class="feature-title">Síntesis de Investigación</h3>
+          <p class="feature-description">Analiza múltiples papers o artículos y obtén las conclusiones principales.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🗂️</div>
+          <h3 class="feature-title">Organización de Contenidos</h3>
+          <p class="feature-description">Conecta ideas entre documentos y crea mapas conceptuales organizados.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🎧</div>
+          <h3 class="feature-title">Material de Audio</h3>
+          <p class="feature-description">Genera podcasts educativos que los estudiantes pueden escuchar mientras estudian.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3 class="feature-title">Comparación de Fuentes</h3>
+          <p class="feature-description">Compara diferentes documentos y encuentra similitudes o diferencias clave.</p>
+        </div>
+      </div>
+
+      <h2 class="section-subtitle">📋 Cómo Empezar: Guía Paso a Paso</h2>
+
+      <div class="steps-container">
+        <div class="step-item">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h4>Accede a NotebookLM</h4>
+            <p>Visita <strong>notebooklm.google.com</strong> e inicia sesión con tu cuenta de Google. Es completamente gratuito.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h4>Crea un Nuevo Notebook</h4>
+            <p>Haz clic en "+ Crear notebook" y dale un nombre descriptivo como "Clase de Programación" o "Material Matemáticas 2024".</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h4>Sube tus Fuentes</h4>
+            <p>Agrega documentos: PDFs, Google Docs, Google Slides, páginas web (URLs), archivos .txt o Markdown. Puedes subir hasta 50 fuentes por notebook.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h4>Explora el Notebook Guide</h4>
+            <p>NotebookLM genera automáticamente un resumen, temas clave y preguntas sugeridas sobre tus documentos.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number">5</div>
+          <div class="step-content">
+            <h4>Haz Preguntas en el Chat</h4>
+            <p>Escribe consultas como: "Resume los 3 conceptos clave", "Genera una actividad práctica" o "Crea 10 preguntas de repaso".</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number">6</div>
+          <div class="step-content">
+            <h4>Genera Contenido Derivado</h4>
+            <p>Usa las funciones especiales: Audio Overview (podcast), Guía de Estudio, FAQ, Timeline, Briefing Document, etc.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number">7</div>
+          <div class="step-content">
+            <h4>Guarda y Comparte</h4>
+            <p>Fija respuestas útiles en "Notas" y comparte el notebook con colegas o estudiantes si lo deseas.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-subtitle">💡 Ejemplo Práctico: Clase de Visual Basic</h2>
+
+      <div class="info-card">
+        <div class="info-card-header">
+          <div class="info-card-icon">💻</div>
+          <div class="info-card-title">Escenario: Preparar una clase sobre PictureBox en VB</div>
+        </div>
+        <div class="info-card-content">
+          <ol style="padding-left: 20px; line-height: 2;">
+            <li><strong>Crea un notebook:</strong> "VB Windows Forms - PictureBox"</li>
+            <li><strong>Sube materiales:</strong> Tus apuntes, ejemplos de código, PDF de referencia, PowerPoint</li>
+            <li><strong>Pregunta a NotebookLM:</strong>
+              <ul style="margin-top: 10px; padding-left: 20px;">
+                <li>"Resume los 3 conceptos clave sobre PictureBox"</li>
+                <li>"Genera una actividad de laboratorio de 30 minutos usando PictureBox"</li>
+                <li>"Crea una guía de repaso con 5 preguntas verdadero/falso"</li>
+                <li>"Diseña un proyecto de memorama usando PictureBox"</li>
+              </ul>
+            </li>
+            <li><strong>Resultado:</strong> Material listo para clase en minutos, verificado con tus propias fuentes</li>
+          </ol>
+        </div>
+      </div>
+
+      <h2 class="section-subtitle">🖼️ Interfaz y Características Visuales</h2>
+
+      <div class="image-gallery">
+        <div class="gallery-item">
+          <div class="gallery-image">📂</div>
+          <h4 style="color: #fbbf24; margin: 10px 0;">Panel de Fuentes</h4>
+          <p class="gallery-caption">Lista de todos los documentos que has cargado en tu notebook</p>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery-image">💬</div>
+          <h4 style="color: #fbbf24; margin: 10px 0;">Chat Interactivo</h4>
+          <p class="gallery-caption">Haz preguntas en lenguaje natural y obtén respuestas basadas en tus fuentes</p>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery-image">📌</div>
+          <h4 style="color: #fbbf24; margin: 10px 0;">Notas Fijadas</h4>
+          <p class="gallery-caption">Guarda respuestas importantes para consultarlas después</p>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery-image">🎙️</div>
+          <h4 style="color: #fbbf24; margin: 10px 0;">Audio Overview</h4>
+          <p class="gallery-caption">Convierte documentos en podcasts con voces de IA conversando sobre el tema</p>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery-image">🔗</div>
+          <h4 style="color: #fbbf24; margin: 10px 0;">Citas Inline</h4>
+          <p class="gallery-caption">Cada respuesta incluye enlaces directos a los fragmentos originales</p>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery-image">📊</div>
+          <h4 style="color: #fbbf24; margin: 10px 0;">Notebook Guide</h4>
+          <p class="gallery-caption">Resumen automático con temas clave y preguntas sugeridas</p>
+        </div>
+      </div>
+
+      <h2 class="section-subtitle">⚖️ Ventajas y Limitaciones</h2>
+
+      <div class="pros-cons-grid">
+        <div class="pros-card">
+          <h3>✅ Ventajas</h3>
+          <ul>
+            <li>Respuestas basadas exclusivamente en tus documentos</li>
+            <li>Citas verificables en cada respuesta</li>
+            <li>Genera múltiples formatos de contenido educativo</li>
+            <li>Función de podcast/audio única y potente</li>
+            <li>Interfaz intuitiva y fácil de usar</li>
+            <li>Gratuito (al menos en su versión actual)</li>
+            <li>Se integra con Google Workspace</li>
+            <li>Reduce tiempo de preparación de materiales</li>
+          </ul>
+        </div>
+
+        <div class="cons-card">
+          <h3>⚠️ Limitaciones</h3>
+          <ul>
+            <li>Límite de 50 fuentes por notebook</li>
+            <li>Cada fuente tiene límite de tamaño</li>
+            <li>No se actualiza automáticamente si modificas un Google Doc</li>
+            <li>Solo responde con info de tus fuentes (no busca en internet)</li>
+            <li>Puede malinterpretar contextos complejos</li>
+            <li>Requiere conexión a internet constante</li>
+            <li>Algunos formatos de archivo no son compatibles</li>
+            <li>Las respuestas deben verificarse siempre</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 class="section-subtitle">🆚 NotebookLM vs Otras Herramientas</h2>
+
+      <div class="comparison-grid">
+        <div class="comparison-card">
+          <div class="comparison-icon">📝</div>
+          <h3 class="comparison-title">vs OneNote/Evernote</h3>
+          <p class="comparison-desc">NotebookLM añade IA que lee, analiza y responde. OneNote solo almacena.</p>
+        </div>
+
+        <div class="comparison-card">
+          <div class="comparison-icon">🤖</div>
+          <h3 class="comparison-title">vs ChatGPT</h3>
+          <p class="comparison-desc">ChatGPT conoce todo internet. NotebookLM solo tus documentos (más preciso).</p>
+        </div>
+
+        <div class="comparison-card">
+          <div class="comparison-icon">🔍</div>
+          <h3 class="comparison-title">vs Google Search</h3>
+          <p class="comparison-desc">Google busca en la web. NotebookLM busca en TUS materiales específicos.</p>
+        </div>
+
+        <div class="comparison-card highlight">
+          <div class="comparison-icon">⭐</div>
+          <h3 class="comparison-title">Ideal Para</h3>
+          <p class="comparison-desc">Profesores, investigadores y cualquiera que trabaje con muchos documentos.</p>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <h3 style="color: #fbbf24; margin-bottom: 15px; font-size: 20px;">🎯 Consejos Finales para Profesores</h3>
+        <ul class="list-styled">
+          <li><strong>Organiza por temas:</strong> Crea notebooks separados para cada unidad o tema del curso</li>
+          <li><strong>Sé específico en tus preguntas:</strong> "Resume los 5 conceptos clave sobre X" es mejor que "Resume esto"</li>
+          <li><strong>Usa Audio Overview:</strong> Genera podcasts para que estudiantes repasen mientras hacen otras actividades</li>
+          <li><strong>Verifica siempre:</strong> Aunque sea preciso, siempre revisa las respuestas antes de usarlas en clase</li>
+          <li><strong>Combina con otras herramientas:</strong> Usa NotebookLM para preparar, luego pasa a Canva o PowerPoint para diseñar</li>
+          <li><strong>Experimenta con formatos:</strong> Pide guías de estudio, FAQs, timelines, briefings, etc.</li>
+          <li><strong>Actualiza regularmente:</strong> Si modificas documentos, recarga las fuentes en NotebookLM</li>
+        </ul>
+      </div>
+
+      <div class="info-card" style="background: rgba(251, 191, 36, 0.1); border: 2px solid #fbbf24;">
+        <div class="info-card-header">
+          <div class="info-card-icon">🚀</div>
+          <div class="info-card-title">¡Empieza Ahora!</div>
+        </div>
+        <div class="info-card-content">
+          <p style="font-size: 16px; margin-bottom: 15px;">
+            NotebookLM es completamente gratuito y no requiere configuración técnica. Solo necesitas una cuenta de Google.
+          </p>
+          <a href="https://notebooklm.google.com" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #fbbf24, #f59e0b); color: #0f172a; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 10px;">
+            🌐 Acceder a NotebookLM
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
   <!-- ==================== VISTA: ¿QUÉ ES LA IA? ==================== -->
   <div id="iaEducacionView" class="view">
     <header class="header">
