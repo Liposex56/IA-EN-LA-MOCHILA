@@ -873,7 +873,7 @@
         font-size: 48px;
       }
     }
-    /* ==================== NOTEBOOKLM ESPECÍFICO ==================== */
+    /* ==================== NOTEBOOKLM ==================== */
 .info-card {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -1264,19 +1264,19 @@
           <p class="comparison-desc">Solo usa los documentos que TÚ subes, evitando información incorrecta o no verificada</p>
         </div>
 
-        <div class="comparison-card">
+        <div class="comparison-card highlight">
           <div class="comparison-icon">🔍</div>
           <h3 class="comparison-title">Citas Verificables</h3>
           <p class="comparison-desc">Cada respuesta incluye referencias exactas a tus documentos originales</p>
         </div>
 
-        <div class="comparison-card">
+        <div class="comparison-card highlight">
           <div class="comparison-icon">🎙️</div>
           <h3 class="comparison-title">Genera Podcasts</h3>
           <p class="comparison-desc">Convierte tus documentos en conversaciones de audio estilo podcast</p>
         </div>
 
-        <div class="comparison-card">
+        <div class="comparison-card highlight">
           <div class="comparison-icon">📝</div>
           <h3 class="comparison-title">Múltiples Formatos</h3>
           <p class="comparison-desc">Crea guías de estudio, FAQs, resúmenes, timelines y más</p>
@@ -2832,6 +2832,28 @@
       link.click();
     }
   </script>
+
+<!-- ==================== SCRIPT PARA DETENER VIDEO ==================== -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // Detectar todos los botones que cambian de vista
+  const backButtons = document.querySelectorAll("[data-back]");
+  
+  backButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      // Cuando el usuario sale de la vista NotebookLM, detener el video
+      const notebookView = document.getElementById("notebooklmView");
+      if (notebookView && notebookView.style.display !== "none") {
+        const iframe = notebookView.querySelector("iframe");
+        if (iframe) {
+          iframe.src = iframe.src; // Reinicia el iframe → detiene el video
+        }
+      }
+    });
+  });
+});
+</script>
+
 
 </body>
 </html>
