@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <link rel="stylesheet" href="Style.CSS">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IA en la Mochila</title>
@@ -14,14 +13,8 @@
     <script src="Actions.js" defer></script>
 </head>
 <body>
-  <!-- ==================== LOGOS DE FONDO ==================== -->
-<div class="background-logos">
-  <img src="Recursos/Logo LI.png" class="bg-logo bg-logo-1" alt="">
-  <img src="Recursos/logo_FacultadCienciasEducacion.png" class="bg-logo bg-logo-2" alt="">
-  <img src="Recursos/facultad-educacion.png" class="bg-logo bg-logo-3" alt="">
-  <img src="Recursos/Logo LI.png" class="bg-logo bg-logo-4" alt="">
-  <img src="Recursos/logo_FacultadCienciasEducacion.png" class="bg-logo bg-logo-5" alt="">
-</div>
+
+  
 
   <!-- ==================== VISTA DE INICIO DE SESIÓN ==================== -->
   <div id="loginView" class="view active">
@@ -34,7 +27,7 @@
         <div id="alertContainer"></div>
 
         <div id="nameGroup" class="form-group hidden">
-          <label class="form-label">Nombre Completo</label>
+          <label class="form-label">Nombre y Apellido</label>
           <div class="input-wrapper">
             <span class="input-icon">👤</span>
             <input type="text" id="nameInput" class="form-input" placeholder="Juan Pérez">
@@ -77,67 +70,94 @@
       </div>
     </div>
   </div>
-
-  <!-- ==================== VISTA DEL PANEL PRINCIPAL ==================== -->
-  <div id="dashboardView" class="view">
-    <header class="header">
-      <div class="header-content">
-        <div class="header-left">
-          <div class="header-logo">✨</div>
-          <div>
-            <div style="font-size: 20px; font-weight: bold;">Plataforma Educativa IA</div>
-            <div style="font-size: 12px; color: #bfdbfe;">Sistema de Aprendizaje Inteligente</div>
-          </div>
-        </div>
-        <button class="btn-logout" id="logoutBtn1">
-          <span>🚪</span>
-          <span>Cerrar Sesión</span>
-        </button>
-      </div>
-    </header>
-
-    <main class="main-content">
-      <div class="welcome-section">
-        <h2 class="welcome-title">Bienvenid@, <span id="userName"></span> 👋</h2>
-        <p style="font-size: 18px; color: #bfdbfe;">Explora el mundo de la Inteligencia Artificial en la educación</p>
-      </div>
-
-      <div class="units-grid">
-        <div class="unit-card" data-view="iaEducacionView">
-          <div class="unit-icon">🤖</div>
-          <h3 class="unit-title">¿Qué es la IA?</h3>
-          <p class="unit-description">Descubre qué es la Inteligencia Artificial y cómo está transformando el mundo de la educación</p>
-        </div>
-
-        <div class="unit-card" data-view="aplicacionesView">
-          <div class="unit-icon">🎓</div>
-          <h3 class="unit-title">IA en Educación</h3>
-          <p class="unit-description">Aprende cómo usar la IA para mejorar el aprendizaje, crear contenido y evaluar</p>
-        </div>
-
-        <div class="unit-card" data-view="recursosView">
-          <div class="unit-icon">📚</div>
-          <h3 class="unit-title">Herramientas IA</h3>
-          <p class="unit-description">Explora 23 aplicaciones de IA para potenciar tu experiencia educativa</p>
-        </div>
-
-        <div class="unit-card" data-view="evaluacionView">
-          <div class="unit-icon">📝</div>
-          <h3 class="unit-title">Evaluación</h3>
-          <p class="unit-description">Pon a prueba tus conocimientos sobre herramientas de IA educativa</p>
-        </div>
-
-        <div class="unit-card" data-view="notebooklmView">
-           <div class="unit-icon">📓</div>
-           <h3 class="unit-title">NotebookLM</h3>
-           <p class="unit-description">La Mano Amiga del Profesor para Entender y Sintetizar Contenido Complejo</p>
-        </div>
-          
-          </div>
+<!-- ==================== VISTA DEL PANEL PRINCIPAL ==================== -->
+<div id="dashboardView" class="view">
+  <header class="header">
+    <div class="header-content">
+      <div class="header-left">
+        <div class="header-logo">✨</div>
+        <div>
+          <div style="font-size: 20px; font-weight: bold;">Plataforma Educativa IA</div>
+          <div style="font-size: 12px; color: #bfdbfe;">Sistema de Aprendizaje Inteligente</div>
         </div>
       </div>
-    </main>
-  </div>
+      <button class="btn-logout" id="logoutBtn1">
+        <span>🚪</span>
+        <span>Cerrar Sesión</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="welcome-section">
+      <h2 class="welcome-title">Bienvenid@, <span id="userName"></span> 👋</h2>
+      <p style="font-size: 18px; color: #bfdbfe;">Explora el mundo de la Inteligencia Artificial en la educación</p>
+    </div>
+
+    <div class="units-grid">
+      <div class="unit-card" data-view="iaEducacionView">
+        <div class="unit-icon">🤖</div>
+        <h3 class="unit-title">¿Qué es la IA?</h3>
+        <p class="unit-description">Descubre qué es la Inteligencia Artificial y cómo está transformando el mundo de la educación</p>
+      </div>
+
+      <div class="unit-card" data-view="aplicacionesView">
+        <div class="unit-icon">🎓</div>
+        <h3 class="unit-title">IA en Educación</h3>
+        <p class="unit-description">Aprende cómo usar la IA para mejorar el aprendizaje, crear contenido y evaluar</p>
+      </div>
+
+      <div class="unit-card" data-view="recursosView">
+        <div class="unit-icon">📚</div>
+        <h3 class="unit-title">Herramientas IA</h3>
+        <p class="unit-description">Explora 23 aplicaciones de IA para potenciar tu experiencia educativa</p>
+      </div>
+
+      <div class="unit-card" data-view="evaluacionView">
+        <div class="unit-icon">📝</div>
+        <h3 class="unit-title">Evaluación</h3>
+        <p class="unit-description">Pon a prueba tus conocimientos sobre herramientas de IA educativa</p>
+      </div>
+
+      <div class="unit-card" data-view="notebooklmView">
+        <div class="unit-icon">📓</div>
+        <h3 class="unit-title">NotebookLM</h3>
+        <p class="unit-description">La Mano Amiga del Profesor para Entender y Sintetizar Contenido Complejo</p>
+      </div>
+    </div>
+
+    <div class="developers-section">
+      <h2 class="developers-title">👥 Desarrolladores del Proyecto</h2>
+      <div class="developers-grid">
+        <div class="developer-card">
+          <div class="developer-avatar"><img src="Recursos/sharon.jpg" alt="sharon"></div>
+          <h3 class="developer-name">Sharon Valentina Rodriguez Peña</h3>
+          <p class="developer-role">Desarrolladora Web</p>
+          <p class="developer-institution">Universidad Pedagógica y Tecnológica de Colombia</p>
+          <p class="developer-contact">📧 sharon.rodriguez@uptc.edu.co</p>
+        </div>
+
+        <div class="developer-card">
+          <div class="developer-avatar"><img src="Recursos/cristian.jpg" alt="cristian"></div>
+          <h3 class="developer-name">Cristian Felipe Gómez Iguavita</h3>
+          <p class="developer-role">Desarrollador Web</p>
+          <p class="developer-institution">Universidad Pedagógica y Tecnológica de Colombia</p>
+          <p class="developer-contact">📧 cristian.gomez17@uptc.edu.co</p>
+        </div>
+
+       <div class="developer-card">
+         <div class="developer-avatar"><img src="Recursos/Profe.jpg" alt="Profe"></div>
+         <h3 class="developer-name">Yenny Carolina Riaño Castellanos</h3>
+         <p class="developer-role">Directora del Proyecto</p>
+        <p class="developer-institution">Universidad Pedagógica y Tecnológica de Colombia</p>
+        <p class="developer-contact">📧 yennycarolina.riano@uptc.edu.co</p>
+       </div>
+        
+      </div>
+      </div>
+    </div>
+  </main>
+</div>
 
        <!-- ==================== VISTA: NOTEBOOKLM ==================== -->
 <div id="notebooklmView" class="view">
@@ -648,8 +668,8 @@
 
     <div class="content-container">
       <div style="margin-bottom: 20px;">
-        <h1 style="font-size: 28px; margin-bottom: 10px;">📚 IA en la Mochila: Apps Claves para el Estudio — <span id="appCount">23</span> herramientas</h1>
-        <p style="font-size: 14px; color: #9fb3c8;">Haz clic en cualquier app para ver más detalles y visitarla</p>
+        <h1 style="font-size: 34px; margin-bottom: 10px;">📚 IA en la Mochila: Apps Claves para el Estudio — <span id="appCount">23</span> herramientas</h1>
+        <p style="font-size: 28px; color: #9fb3c8;">Haz clic en cualquier app para ver más detalles y visitarla</p>
       </div>
 
       <nav class="filters">
@@ -1758,6 +1778,55 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 </script>
+
+<!-- ==================== FOOTER (COPIA DESDE AQUÍ) ==================== -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-main">
+            
+            <!-- Columna 1: Información del Proyecto -->
+            <div class="footer-column">
+                <div class="footer-project-header">
+                    <div class="footer-project-icon">
+                        <img src="recursos/Logo IA en la Mochila.png" alt="Logo IA en la Mochila">
+                        <!-- Si no tienes logo, usa: 🎒🤖 -->
+                    </div>
+                    <div class="footer-project-title">
+                        <h3>IA en la Mochila</h3>
+                        <span>IA Educativa</span>
+                    </div>
+                </div>
+                <p class="footer-project-description">
+                    Plataforma educativa innovadora que integra inteligencia artificial para mejorar el aprendizaje y la educación. Transformando la forma en que estudiantes y docentes interactúan con la tecnología.
+                </p>
+            </div>
+
+            <!-- Columna 2: UPTC -->
+            <div class="footer-column footer-image-column">
+                <img src="recursos/Logo_de_la_UPTC.svg.png" alt="Universidad Pedagógica y Tecnológica de Colombia">
+            </div>
+
+            <!-- Columna 3: Licenciatura en Informática -->
+            <div class="footer-column footer-image-column">
+                <img src="recursos/Logo LI.png" alt="Licenciatura en Informática">
+            </div>
+
+            <!-- Columna 4: Facultad de Ciencias de la Educación -->
+            <div class="footer-column footer-image-column">
+                <img src="recursos/logo_FacultadCienciasEducacion.png" alt="Facultad de Ciencias de la Educación">
+            </div>
+
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>
+                © 2025 IA en la Mochila - Proyecto de IA Educativa. Todos los derechos reservados.<br>
+                Desarrollado con ❤️ por <a href="cristian.gomez@uptc.edu.co">El Equipo de Desarrollo</a>
+            </p>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
