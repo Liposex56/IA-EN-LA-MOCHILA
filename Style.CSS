@@ -7,84 +7,207 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Poppins;
   background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0f172a 100%);
   min-height: 100vh;
   color: white;
-  position: relative;  
 }
 
 .view {
   display: none;
-  position: relative;  
-  z-index: 1;         
 }
-
 
 .view.active {
   display: block;
 }
 
-    
-/* ==================== LOGOS DE FONDO ==================== */
-.background-logos {
-  position: fixed;
-  top: 0;
-  left: 0;
+
+.developer-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #f59e0b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #1e3a8a;
+  margin: 0 auto 20px;
+}
+
+.developer-avatar img {
   width: 100%;
   height: 100%;
-  pointer-events: none;
-  z-index: 0;
-  overflow: hidden;
+  object-fit: cover;
 }
 
-.bg-logo {
-  position: absolute;
-  opacity: 0.08;
-  pointer-events: none;
+.developer-avatar {
+  font-size: 48px;
 }
 
-.bg-logo-1 {
-  top: 10%;
-  left: 5%;
-  width: 200px;
+/* ==================== FOOTER ==================== */
+footer {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 40px 20px 20px;
+  margin-top: auto;
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Columna 1: Información del Proyecto */
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-project-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.footer-project-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.footer-project-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.footer-project-title h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fbbf24;
+  margin-bottom: 3px;
+}
+
+.footer-project-title span {
+  font-size: 14px;
+  color: #bfdbfe;
+}
+
+.footer-project-description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #e0e7ff;
+}
+
+/* Columnas de imágenes con marcos */
+.footer-image-column {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  min-height: 120px;
+}
+
+.footer-image-column:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(251, 191, 36, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(251, 191, 36, 0.2);
+}
+
+.footer-image-column img {
+  max-width: 100%;
+  max-height: 90px;
+  width: auto;
   height: auto;
+  object-fit: contain;
+  filter: brightness(1.1);
 }
 
-.bg-logo-2 {
-  top: 50%;
-  right: 8%;
-  width: 250px;
-  height: auto;
+/* Copyright */
+.footer-bottom {
+  padding-top: 25px;
+  text-align: center;
 }
 
-.bg-logo-3 {
-  bottom: 10%;
-  left: 10%;
-  width: 220px;
-  height: auto;
+.footer-bottom p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.8;
 }
 
-.bg-logo-4 {
-  top: 30%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 180px;
-  height: auto;
+.footer-bottom a {
+  color: #fbbf24;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
 }
 
-.bg-logo-5 {
-  bottom: 25%;
-  right: 15%;
-  width: 190px;
-  height: auto;
+.footer-bottom a:hover {
+  color: #f59e0b;
+  text-decoration: underline;
 }
 
-.bg-logo-6 {
-  top: 70%;
-  left: 30%;
-  width: 200px;
-  height: auto;
+/* Responsive */
+@media (max-width: 1024px) {
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+
+  .footer-column:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  footer {
+    padding: 30px 20px 20px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .footer-project-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-project-description {
+    text-align: center;
+  }
+
+  .footer-image-column {
+    min-height: 100px;
+  }
+
+  .footer-image-column img {
+    max-height: 70px;
+  }
 }
 /* ==================== LOGIN ==================== */
 .login-container {
@@ -380,6 +503,132 @@ body {
   font-size: 20px;
   line-height: 1.6;
 }
+/* ==================== SECCIÓN DESARROLLADORES ==================== */
+.developers-section {
+  background: rgba(152, 152, 152, 0.249);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.developers-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #fbbf24;
+  margin-bottom: 40px;
+}
+
+.developers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.developer-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.3s;
+  width: 100%;
+  max-width: 350px;
+}
+
+.developer-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border-color: rgba(251, 191, 36, 0.6);
+}
+
+.developer-avatar-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.developer-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fbbf24;
+  box-shadow: 0 8px 20px rgba(251, 191, 36, 0.3);
+}
+
+.developer-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.developer-role {
+  font-size: 18px;
+  color: #fbbf24;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.developer-institution {
+  font-size: 16px;
+  color: #bfdbfe;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.developer-contact {
+  font-size: 16px;
+  color: #93c5fd;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .developers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .developer-card {
+    max-width: 100%;
+  }
+
+  .developer-avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .developers-title {
+    font-size: 28px;
+  }
+}
+
+
+/* Para agregar fotos/iconos específicos a cada botón, puedes usar clases adicionales o IDs */
+/* Ejemplo para el botón de NotebookLM */
+.visit-site-btn.notebooklm::before {
+  content: '';
+  background-image: url('ruta/a/la/imagen/notebooklm.png'); /* Reemplaza con la ruta real */
+  background-size: cover;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
+
+/* Ejemplo para el botón en el modal */
+.visit-site-btn.modal-btn::before {
+  content: '';
+  background-image: url('ruta/a/la/imagen/modal.png'); /* Reemplaza con la ruta real */
+  background-size: cover;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
+
 
 /* ==================== CONTENIDO EDUCATIVO ==================== */
 .content-container {
@@ -504,7 +753,7 @@ body {
   padding: 10px 18px;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 28px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -546,7 +795,7 @@ body {
 
 .app:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 12px 35px rgba(255, 255, 255, 0.6);
   border-color: rgba(251, 191, 36, 0.4);
 }
 
@@ -571,6 +820,7 @@ body {
   font-weight: 700;
   font-size: 20px;
   margin-bottom: 4px;
+  color: #fff;
 }
 
 .cat {
@@ -1196,7 +1446,7 @@ canvas {
   left: 0;
   color: #ef4444;
   font-size: 26px;
-  
+
 }
 @media (min-width: 320px) {
   /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
