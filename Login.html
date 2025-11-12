@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <i rel="icon" type="image" href="/Recursos/Logo-EduReader.png"/>
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <link rel="stylesheet" href="Login.css"/>
+
+    <script src="Actions.js" defer></script>
+</head>
+<body>
+    <div class="login-container">
+        <div class="Logo"><img src="/Recursos/Logo-EduReader.png" alt="Logo EduReader">
+        </div>
+        <h2>EduReader</h2>
+        <p> Plataforma de aprendizaje interactivo</p>
+        <h5>Selecciona tu rol</h5>
+        <div class="Rol">
+            <button id="EStudianteBtn"><span class="material-symbols-outlined">
+            </span>
+            Estudiante
+            </button>
+            <button id="DocenteBtn">
+                <span class="material-symbols-outlined">
+                </span>
+                Docente
+            </button>
+        </div>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="Correo">Correo:</label><br>
+                <input type="text" id="Correo" name="Correo" required> <br>
+                <label for="password">Contraseña:</label><br>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <a href="/Home.html">
+            <button type="submit"> Iniciar Sesión</button>
+            </a>
+            </form>
+</html>
